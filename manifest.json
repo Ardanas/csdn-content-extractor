@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "CSDN内容提取器",
+  "version": "1.0",
+  "description": "提取CSDN博客内容并允许复制",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://blog.csdn.net/*"],
+      "js": ["content.js"],
+      "css": ["overlay.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["overlay.html", "overlay.js", "overlay.css"],
+      "matches": ["https://blog.csdn.net/*"]
+    }
+  ]
+}

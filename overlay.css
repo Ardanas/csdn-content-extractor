@@ -1,0 +1,54 @@
+#csdn-extractor-overlay {
+  position: fixed;
+  top: 20px;
+  left: 20px;  /* 改为左侧 */
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  resize: both;
+  overflow: auto;
+  min-width: 300px;
+  min-height: 200px;
+  font-size: 14px;  /* 添加默认字体大小 */
+}
+
+#csdn-extractor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;  /* 减小内边距 */
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  cursor: move;  /* 添加这行，使头部可拖动 */
+  height: 30px;  /* 设置固定高度 */
+}
+
+#csdn-extractor-header h1 {
+  margin: 0;
+  font-size: 16px;  /* 减小标题字体大小 */
+  font-weight: normal;  /* 减轻字体粗细 */
+}
+
+#csdn-extractor-close {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 3px 6px;  /* 减小按钮内边距 */
+  cursor: pointer;
+  font-size: 12px;  /* 减小按钮字体大小 */
+}
+
+#csdn-extractor-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+#csdn-extractor-content img {
+  max-width: 100%;
+  height: auto;
+}
